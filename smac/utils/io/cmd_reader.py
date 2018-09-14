@@ -33,7 +33,7 @@ class CMDReader(object):
 
         parser = ArgumentParser(formatter_class=ArgumentDefaultsHelpFormatter)
         req_opts = parser.add_argument_group("Required Options")
-        req_opts.add_argument("--scenario_file", required=True,
+        req_opts.add_argument("--scenario_file", default="scenario.txt",
                               help="scenario file in AClib format")
 
         req_opts = parser.add_argument_group("Optional Options")

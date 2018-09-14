@@ -23,6 +23,7 @@ from smac.tae.execute_ta_run import FirstRunCrashedException
 from smac.utils.io.traj_logging import TrajLogger
 from smac.utils.validate import Validator
 
+from smac.tae.execute_ta_run import StatusType
 
 
 __author__ = "Aaron Klein, Marius Lindauer, Matthias Feurer"
@@ -153,6 +154,36 @@ class SMBO(object):
                              "incumbent %s", self.incumbent)
             self.logger.info("State restored with following budget:")
             self.stats.print_stats()
+
+    def nni_smac_start(self):
+        config = self.scenario.cs.sample_configuration()
+        config.origin = 'Random initial design.'
+        return config
+
+    def nni_smac_request_challengers(self):
+        start_time = time.time()
+        X, Y = self.rh2EPM.transform(self.runhistory)
+
+        self.logger.debug("Search for next configuration")
+        # get all found configurations sorted according to acq
+        challengers = self.choose_next(X, Y)
+
+        return challengers
+
+    def nni_smac_receive_first_run(self, challenger, reward):
+        self.runhistory.add(config=challenger,
+                            cost=reward, time=-1, status=StatusType.SUCCESS)
+        self.incumbent = challenger
+
+    def nni_smac_receive_runs(self, challenger, reward):
+        # update self.runhistory
+        self.runhistory.add(config=challenger,
+                            cost=reward, time=-1, status=StatusType.SUCCESS)
+        # update self.incumbent
+        cha_cost = self.runhistory.get_cost(challenger)
+        inc_cost = self.runhistory.get_cost(self.incumbent)
+        if cha_cost < inc_cost:
+            self.incumbent = challenger
 
     def run(self):
         """Runs the Bayesian optimization loop
