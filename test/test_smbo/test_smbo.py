@@ -4,7 +4,7 @@ from unittest import mock
 import shutil
 
 import numpy as np
-from ConfigSpace import Configuration
+from ConfigSpaceNNI import Configuration
 
 from smac.epm.rf_with_instances import RandomForestWithInstances
 from smac.epm.uncorrelated_mo_rf_with_instances import \

@@ -3,10 +3,10 @@ import unittest
 import logging
 import numpy
 
-from ConfigSpace import Configuration, ConfigurationSpace
-from ConfigSpace.hyperparameters import UniformIntegerHyperparameter, \
+from ConfigSpaceNNI import Configuration, ConfigurationSpace
+from ConfigSpaceNNI.hyperparameters import UniformIntegerHyperparameter, \
     CategoricalHyperparameter, UniformFloatHyperparameter
-from ConfigSpace.conditions import InCondition
+from ConfigSpaceNNI.conditions import InCondition
 
 from pyrfr.regression import binary_rss_forest
 

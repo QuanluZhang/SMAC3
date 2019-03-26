@@ -1,7 +1,7 @@
 import typing
 import numpy as np
 
-from ConfigSpace.configuration_space import Configuration
+from ConfigSpaceNNI.configuration_space import Configuration
 
 from smac.initial_design.initial_design import InitialDesign
 from smac.initial_design.single_config_initial_design import SingleConfigInitialDesign

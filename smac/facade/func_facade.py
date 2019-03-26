@@ -8,7 +8,7 @@ from smac.configspace import ConfigurationSpace
 from smac.runhistory.runhistory import RunKey
 from smac.tae.execute_func import ExecuteTAFuncArray
 
-from ConfigSpace.hyperparameters import UniformFloatHyperparameter
+from ConfigSpaceNNI.hyperparameters import UniformFloatHyperparameter
 
 __author__ = "Marius Lindauer, Matthias Feurer"
 __copyright__ = "Copyright 2016, ML4AAD"

@@ -1,6 +1,6 @@
 import numpy as np
 
-from ConfigSpace.hyperparameters import CategoricalHyperparameter, \
+from ConfigSpaceNNI.hyperparameters import CategoricalHyperparameter, \
     UniformFloatHyperparameter, UniformIntegerHyperparameter, Constant, \
     OrdinalHyperparameter
 

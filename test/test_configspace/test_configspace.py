@@ -6,9 +6,9 @@ Created on Nov 19, 2015
 import os
 import unittest
 
-from ConfigSpace.read_and_write import pcs
-from ConfigSpace.hyperparameters import CategoricalHyperparameter
-from ConfigSpace.conditions import EqualsCondition
+from ConfigSpaceNNI.read_and_write import pcs
+from ConfigSpaceNNI.hyperparameters import CategoricalHyperparameter
+from ConfigSpaceNNI.conditions import EqualsCondition
 import smac.configspace
 
 
