@@ -2,7 +2,7 @@ import unittest
 
 import numpy as np
 
-from ConfigSpace.hyperparameters import UniformFloatHyperparameter
+from ConfigSpaceNNI.hyperparameters import UniformFloatHyperparameter
 
 from smac.configspace import ConfigurationSpace
 

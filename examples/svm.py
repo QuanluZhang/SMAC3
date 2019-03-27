@@ -12,9 +12,9 @@ from sklearn.model_selection import cross_val_score
 
 # Import ConfigSpace and different types of parameters
 from smac.configspace import ConfigurationSpace
-from ConfigSpace.hyperparameters import CategoricalHyperparameter, \
+from ConfigSpaceNNI.hyperparameters import CategoricalHyperparameter, \
     UniformFloatHyperparameter, UniformIntegerHyperparameter
-from ConfigSpace.conditions import InCondition
+from ConfigSpaceNNI.conditions import InCondition
 
 # Import SMAC-utilities
 from smac.tae.execute_func import ExecuteTAFuncDict

@@ -7,7 +7,7 @@ import numpy as np
 
 from unittest import mock
 
-from ConfigSpace.hyperparameters import UniformFloatHyperparameter
+from ConfigSpaceNNI.hyperparameters import UniformFloatHyperparameter
 
 from smac.configspace import ConfigurationSpace
 from smac.smac_cli import SMACCLI

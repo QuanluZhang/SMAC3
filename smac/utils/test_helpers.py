@@ -1,5 +1,5 @@
-from ConfigSpace.configuration_space import ConfigurationSpace
-from ConfigSpace.hyperparameters import UniformFloatHyperparameter
+from ConfigSpaceNNI.configuration_space import ConfigurationSpace
+from ConfigSpaceNNI.hyperparameters import UniformFloatHyperparameter
 
 
 def get_branin_config_space():

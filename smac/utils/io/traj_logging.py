@@ -5,8 +5,8 @@ import json
 import typing
 import collections
 
-from ConfigSpace.configuration_space import ConfigurationSpace, Configuration
-from ConfigSpace.hyperparameters import FloatHyperparameter, IntegerHyperparameter
+from ConfigSpaceNNI.configuration_space import ConfigurationSpace, Configuration
+from ConfigSpaceNNI.hyperparameters import FloatHyperparameter, IntegerHyperparameter
 
 __author__ = "Marius Lindauer"
 __copyright__ = "Copyright 2016, ML4AAD"

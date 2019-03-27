@@ -14,8 +14,8 @@ import shutil
 
 import numpy as np
 
-from ConfigSpace import Configuration, ConfigurationSpace
-from ConfigSpace.hyperparameters import UniformIntegerHyperparameter
+from ConfigSpaceNNI import Configuration, ConfigurationSpace
+from ConfigSpaceNNI.hyperparameters import UniformIntegerHyperparameter
 
 from smac.scenario.scenario import Scenario, _is_truthy
 from smac.configspace import ConfigurationSpace

@@ -2,7 +2,7 @@ import os
 import shutil
 
 import typing
-from ConfigSpace import ConfigurationSpace
+from ConfigSpaceNNI import ConfigurationSpace
 
 from smac.configspace import pcs_new as pcs
 
