@@ -7,7 +7,7 @@ import typing
 import logging
 import numpy as np
 
-from smac.configspaceNNI import Configuration, convert_configurations_to_array
+from smac.configspace import Configuration, convert_configurations_to_array
 from smac.epm.rf_with_instances import RandomForestWithInstances
 from smac.epm.rfr_imputator import RFRImputator
 from smac.optimizer.objective import average_cost
